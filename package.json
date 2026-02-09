@@ -2,16 +2,15 @@
   "name": "todo-app",
   "version": "1.0.0",
   "description": "Simple ToDo app served by Express on Azure App Service",
-  "private": true,
   "type": "module",
-  "engines": {
-    "node": ">=20.x <=24.x"
-  },
   "scripts": {
-    "start": "node server.js",
-    "build": "echo \"No build step for static HTML\""
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=20 <=24"
   }
 }
+``
