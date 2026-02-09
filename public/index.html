@@ -22,4 +22,37 @@ function addTask() {
 
 </body>
 </html>
+
+<script>
+async function loadTasks() {
+  const res = await fetch("/api/tasks");
+  const tasks = await res.json();
+  console.log(tasks);
+}
+
+async function addTask(text) {
+  await fetch("/api/tasks", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text })
+  });
+  loadTasks();
+}
+
+async function completeTask(id) {
+  await fetch(`/api/tasks/${id}`, {
+    method: "PUT"
+  });
+  loadTasks();
+}
+
+async function deleteTask(id) {
+  await fetch(`/api/tasks/${id}`, {
+    method: "DELETE"
+  });
+  loadTasks();
+}
+
+loadTasks();
+</script>
 `` 
