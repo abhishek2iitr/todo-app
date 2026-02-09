@@ -11,5 +11,10 @@
   },
   "engines": {
     "node": ">=20 <=24"
-  }
+  },
+  "dependencies": {
+  "express": "^4.19.2",
+  "sqlite3": "^5.1.6",
+  "better-sqlite3": "^9.0.0"
+}
 }
